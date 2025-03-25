@@ -9,6 +9,10 @@ Supported Actions:
   - saving to file
   - resizing
 
+## Build
+Run build.lua with [premake](https://premake.github.io/). 
+Tested on Widows, but should also work on Linux.
+Mac should not work due to limited VT100 command support.
 ## UI preview
 ```
          A           B           C           D           E           F           G           H      ............................
