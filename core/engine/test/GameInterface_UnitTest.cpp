@@ -24,8 +24,8 @@ TEST(GameInterface, PositionWrappers) {
 	for (const TileI& tile : vi) {
 		vi_converted.push_back(TileP{ bindex_to_position(tile.index), tile.piece, tile.color });
 	}
-	std::sort(vi_converted.begin(), vi_converted.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
-	std::sort(vp.begin(), vp.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
+	//std::sort(vi_converted.begin(), vi_converted.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
+	//std::sort(vp.begin(), vp.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
 	EXPECT_EQ(vi_converted, vp);
 
 
@@ -36,8 +36,8 @@ TEST(GameInterface, PositionWrappers) {
 	for (const TileI& tile : vinew) {
 		vinew_converted.push_back(TileP{ bindex_to_position(tile.index), tile.piece, tile.color });
 	}
-	std::sort(vinew_converted.begin(), vinew_converted.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
-	std::sort(vpnew.begin(), vpnew.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
+	//std::sort(vinew_converted.begin(), vinew_converted.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
+	//std::sort(vpnew.begin(), vpnew.end(), [](TileP a, TileP b) {return position_to_bindex(a.position) > position_to_bindex(b.position); });
 	EXPECT_EQ(vinew_converted, vpnew);
 
 
@@ -48,7 +48,7 @@ TEST(GameInterface, PositionWrappers) {
 	for (const TileI& tile : vir) {
 		vir_converted.push_back(TileP{ bindex_to_position(tile.index), tile.piece, tile.color });
 	}
-	std::sort(vir_converted.begin(), vir_converted.end());
-	std::sort(vpr.begin(), vpr.end());
+	//std::sort(vir_converted.begin(), vir_converted.end());
+	//std::sort(vpr.begin(), vpr.end());
 	EXPECT_EQ(vir_converted, vpr);
 }
